@@ -1,0 +1,45 @@
+doctype html 
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title #{title} | Real Estate Agency ICEGARD
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        header#header
+            div#logo-header
+                a(href="/") Icegard
+            div#nav-bar
+                ul.nav-items
+                    li.nav-item: a(href="/") Home
+                    li.nav-item: a(href="/") Services
+                    li.nav-item: a(href="/catalog") Catalog
+                    li.nav-item: a(href="/") About
+                    li.nav-item: a(href="/") Contact us
+            div.admin
+                a(href="/admin/estate") Admin Panel
+                img.admin-btn(src="/images/admin.svg", alt="admin button")
+    main#main
+      block layout-content 
+    footer#footer 
+        div#row-one
+            div.nav-container
+                div#logo-footer
+                    a(href="/") Icegard
+                div.nav-items
+                    li.nav-item: a(href="/") Home
+                    li.nav-item: a(href="/") Services
+                    li.nav-item: a(href="/catalog") Catalog
+                    li.nav-item: a(href="/") About
+                    li.nav-item: a(href="/") Contact us
+            div.socials-container
+                div:p Follow us
+                div.socials
+                    img.tw(src="/images/tw.svg", alt="follow us on twitter")
+                    img.insta(src="/images/insta.svg", alt="follow us on instagram")
+                    img.fb(src="/images/fb.svg", alt="follow us on facebook")
+        hr#divider
+        div#row-two
+            div.privacy
+                a(href="/") Privacy Policy
+            div.rights &copy; IceGard 2022. All rights reserved.

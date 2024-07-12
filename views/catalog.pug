@@ -1,0 +1,25 @@
+extends common/layout
+
+block layout-content
+    div.catalog
+        div.catalog-text
+            div.catalog-title
+                h1.page-title Our properties
+            div.catalog-desc
+                p Choose an interior design studio among partners of IceGuard. Among them are the highest quality, modern studios that will breathe life into your new home. Explore a variety of styles, materials, and innovative solutions tailored to make your home both beautiful and practical. With our expertise, your dream home is just a step away.
+        div.properties-container
+            each estate in estates
+                div.card
+                    a(href="/estate?estateId=" + estate._id)
+                        div.estate-img 
+                            img(src=estate.image[0] alt=estate.title)
+                        div.panel
+                            div
+                                h2 #{estate.title}
+                            div.info
+                                div.info-text
+                                    p #{estate.bedroom} beds | #{estate.bathroom} baths | #{estate.size} sqf
+                                    p Price: $#{estate.price}
+                                .btn-details Details
+
+    

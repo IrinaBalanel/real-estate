@@ -1,0 +1,27 @@
+extends common/layout
+
+block layout-content
+    //- input(type="hidden", name="estateId", value=estate._id)
+    div.estate-page
+        div.estate-text
+            div.estate-title 
+                h1.page-title #{estate.title}
+                div.loc
+                    img(src="/images/loc.svg", alt="location")
+                    p #{estate.address}
+            div.estate-desc
+                div.numbers
+                    div
+                        p #{estate.size} sqf | #{estate.bedroom} beds | #{estate.bathroom} baths
+                    div 
+                        h2 $#{estate.price}
+                p #{estate.description}
+        div.estate-images
+            div.image
+                img(src=estate.image[0] alt=estate.title)
+            div.image
+                img(src=estate.image[1] alt=estate.title)
+            div.image
+                img(src=estate.image[2] alt=estate.title)
+        div.btn
+            a.book-btn(href="///") Book a visit

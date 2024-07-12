@@ -1,0 +1,38 @@
+extends common/layout 
+
+block layout-content
+    div.admin-form-page
+        h1 Add a new estate to the catalog
+        form.form(method="post", action="/admin/estate/add/submit")
+            div.form-body
+                div.input  
+                    label(for="title") Title *
+                    input(type="text", id="title", name="title" placeholder="Nice House in Toronto" required)
+                div.input 
+                    label(for="price") Price *
+                    input(type="number", id="price", name="price", placeholder="e.g. 970000" required)
+                div.input
+                    label(for="sqf") Size in sqf * 
+                    input(type="number", id="sqf", name="size", placeholder="e.g. 850" required)
+                div.input
+                    label(for="beds") Bedrooms *
+                    input(type="number", id="beds", name="bedroom", placeholder="e.g. 2" required)
+                div.input 
+                    label(for="baths") Bathrooms *
+                    input(type="number", id="baths", name="bathroom", placeholder="e.g. 1" required)
+                div.input 
+                    label(for="address") Address *
+                    input(type="text", id="address", name="address", placeholder="e.g. 1404, 25 Selby St., Toronto" required)
+                div.input 
+                    label(for="about") Description *
+                    textarea(id="about", name="description", placeholder="e.g. Very cozy, ..." required)
+                div.input 
+                    label(for="img-one") Image 1 *
+                    input(type="text", id="img-one", name="image", placeholder="e.g. https://unsplash.com/..." required)
+                div.input 
+                    label(for="img-two") Image 2: 
+                    input(type="text", id="img-two", name="image", placeholder="e.g. https://unsplash.com/...")
+                div.input
+                    label(for="img-three") Image 3: 
+                    input(type="text", id="img-three", name="image", placeholder="e.g. https://unsplash.com/...")
+            button(type="submit" id="submit") Add estate

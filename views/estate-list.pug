@@ -1,0 +1,12 @@
+extends common/layout 
+
+block layout-content
+    div.admin-page
+        div.admin-container
+            h1.page-title Admin panel for estates
+            div
+                a.add-btn(href="/admin/estate/add") + Add new estate
+        ul
+            each estate in estates
+                a(href="/estate?estateId=" + estate._id)
+                    li #{estate.title}
