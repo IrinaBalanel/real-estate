@@ -14,9 +14,8 @@ Designed and implemented a responsive web application for a Real Estate Agency u
     address: String,
     price: Number,
     image: [String]
-});
-
-const Estate = mongoose.model("Estate", EstatesSchema);`
+  });
+  const Estate = mongoose.model("Estate", EstatesSchema);`
 
 - Data Storage: Stores property data in a MongoDB collection hosted on MongoDB Atlas.
 - Initialize function: Helps to quickly import data to the database and populate the website with dinamically updated content
