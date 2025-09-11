@@ -39,5 +39,8 @@ The project contains Admin functionality which allows easy addition of data to t
 6. Adjust port number in index.js if needed: `const port = process.env.PORT || "8888";`
 7. Run `npm run dev` to run the project
 
+## More projects
+Explore more of my work on my portfolio: [irinabalanel.com](https://irinabalanel.com/)
+
 ## Design
 <img src="frames.png" width="600px">
